@@ -1,22 +1,16 @@
 <!doctype html>
-<script src="game.js"></script>
-<link rel="stylesheet" href="game.css">
-
-<style>
-  .monster { background: purple }
-</style>
-
-<body>
-  <script>
+<html>
+  <head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="./src/assets/styles/game.css">
+  </head>
+  <body>
+    <script>
     const monsterSpeed = 4;
-
     class Monster {
       constructor(pos) { this.pos = pos; }
-
       get type() { return "monster"; }
-
       static create(pos) { return new Monster(pos.plus(new Vec(0, -1))); }
-
       update(time, state) {
         let player = state.player;
         let speed = (player.pos.x < this.pos.x ? -1 : 1) * time * monsterSpeed;
@@ -24,7 +18,6 @@
         if (state.level.touches(newPos, this.size, "wall")) return this;
         else return new Monster(newPos);
       }
-
       collide(state) {
         let player = state.player;
         if (player.pos.y + player.size.y < this.pos.y + 0.5) {
@@ -35,24 +28,9 @@
         }
       }
     }
-
     Monster.prototype.size = new Vec(1.2, 2);
-
     levelChars["M"] = Monster;
-
-    runLevel(new Level(`
-..................................
-.################################.
-.#..............................#.
-.#..............................#.
-.#..............................#.
-.#...........................o..#.
-.#..@...........................#.
-.##########..............########.
-..........#..o..o..o..o..#........
-..........#...........M..#........
-..........################........
-..................................
-`), DOMDisplay);
+    runGame(GAME_LEVELS, DOMDisplay);
   </script>
-</body>
+  </body>
+</html>
