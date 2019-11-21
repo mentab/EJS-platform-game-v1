@@ -10,7 +10,6 @@ const levelChars = {
   "=": Lava, "|": Lava, "v": Lava
 };
 
-
 export class Level {
   constructor(plan) {
     let rows = plan.trim().split("\n").map(l => [...l]);
