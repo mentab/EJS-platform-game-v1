@@ -17,6 +17,12 @@ export class Lava {
       return new Lava(pos, new Vec(0, 2));
     } else if (ch == "v") {
       return new Lava(pos, new Vec(0, 3), pos);
+    } else if (ch == ">") {
+      return new Lava(pos, new Vec(3, 0), pos);
+    } else if (ch == "<") {
+      return new Lava(pos, new Vec(-3, 0), pos);
+    } else if (ch == "^") {
+      return new Lava(pos, new Vec(0, -3), pos);
     }
   }
 }

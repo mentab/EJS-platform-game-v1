@@ -7,7 +7,8 @@ import { Vec } from './../models/vec.js';
 const levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
   "@": Player, "o": Coin, "M": Monster,
-  "=": Lava, "|": Lava, "v": Lava
+  "=": Lava, "|": Lava, "v": Lava,
+  ">": Lava, "<": Lava, "^": Lava
 };
 
 export class Level {
