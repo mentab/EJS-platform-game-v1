@@ -2,13 +2,15 @@ import { Player } from './../models/player.js';
 import { Coin } from './../models/coin.js';
 import { Monster } from './../models/monster.js';
 import { Lava } from './../models/lava.js';
+import { Wall } from './../models/wall.js';
 import { Vec } from './../models/vec.js';
 
 const levelChars = {
   ".": "empty", "#": "wall", "+": "lava",
   "@": Player, "o": Coin, "M": Monster,
   "=": Lava, "|": Lava, "v": Lava,
-  ">": Lava, "<": Lava, "^": Lava
+  ">": Lava, "<": Lava, "^": Lava,
+  "-": Wall
 };
 
 export class Level {

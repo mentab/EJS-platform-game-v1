@@ -26,8 +26,7 @@ DOMDisplay.prototype.scrollPlayerIntoView = function(state) {
   let top = this.dom.scrollTop, bottom = top + height;
 
   let player = state.player;
-  let center = player.pos.plus(player.size.times(0.5))
-                         .times(scale);
+  let center = player.pos.plus(player.size.times(0.5)).times(scale);
 
   if (center.x < left + margin) {
     this.dom.scrollLeft = center.x - margin;

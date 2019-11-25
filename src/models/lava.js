@@ -23,6 +23,8 @@ export class Lava {
       return new Lava(pos, new Vec(-3, 0), pos);
     } else if (ch == "^") {
       return new Lava(pos, new Vec(0, -3), pos);
+    } else if (ch == "-") {
+      return new Platform(pos, new Vec(3, 0));
     }
   }
 }
