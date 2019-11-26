@@ -11,7 +11,6 @@ body           { background: rgb(125, 125, 125) }
 .coin   { background: rgb(241, 229, 89); }
 .player { background: rgb(64, 64, 64); }
 .monster { background: purple; }
-.platform { background: brown; }
 
 .game {
   overflow: hidden;
