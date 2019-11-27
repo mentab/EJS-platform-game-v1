@@ -1,5 +1,5 @@
 import { GAME_LEVELS } from './src/levels/levels.js';
-import { DOMDisplay } from './src/models/DOMDisplay.js';
+import { CanvasDisplay } from './src/models/CanvasDisplay.js';
 import { Level } from './src/models/level.js';
 import { State } from './src/models/state.js';
 
@@ -68,4 +68,4 @@ async function runGame(plans, Display) {
   }
 }
 
-runGame(GAME_LEVELS, DOMDisplay);
+runGame(GAME_LEVELS, CanvasDisplay);
